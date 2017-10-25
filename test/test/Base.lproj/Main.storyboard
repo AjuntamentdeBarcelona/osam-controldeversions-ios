@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0A-kI-hbp">
+                                <rect key="frame" x="250" y="210" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4xn-W3-vWL"/>
+                                </constraints>
+                                <state key="normal" title="No Buttons">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertViewWithoutButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wgi-B3-plL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fS-Hx-1cm">
+                                <rect key="frame" x="250" y="310" width="100" height="30"/>
+                                <state key="normal" title="OK &amp; Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertViewWithCancelAndOkButtonActionURL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vo6-Yq-fM2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZc-h0-waf">
+                                <rect key="frame" x="250" y="260" width="100" height="30"/>
+                                <state key="normal" title="Only Ok">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertViewWithOkButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w70-kU-vbL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcR-uN-SwM">
+                                <rect key="frame" x="250" y="360" width="100" height="30"/>
+                                <state key="normal" title="Service URL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertViewByServiceURL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dj-mz-W1Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7fS-Hx-1cm" firstAttribute="leading" secondItem="VcR-uN-SwM" secondAttribute="leading" id="12y-76-c2F"/>
+                            <constraint firstItem="7fS-Hx-1cm" firstAttribute="top" secondItem="lZc-h0-waf" secondAttribute="bottom" constant="20" id="K5W-1b-oKF"/>
+                            <constraint firstItem="7fS-Hx-1cm" firstAttribute="leading" secondItem="lZc-h0-waf" secondAttribute="leading" id="K8m-Tx-iYh"/>
+                            <constraint firstItem="c0A-kI-hbp" firstAttribute="trailing" secondItem="lZc-h0-waf" secondAttribute="trailing" id="Mzy-mC-5Tn"/>
+                            <constraint firstItem="lZc-h0-waf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-25" id="ON4-b7-39v"/>
+                            <constraint firstItem="7fS-Hx-1cm" firstAttribute="trailing" secondItem="VcR-uN-SwM" secondAttribute="trailing" id="di0-f3-4ch"/>
+                            <constraint firstItem="lZc-h0-waf" firstAttribute="top" secondItem="c0A-kI-hbp" secondAttribute="bottom" constant="20" id="foA-jF-UTq"/>
+                            <constraint firstItem="7fS-Hx-1cm" firstAttribute="trailing" secondItem="lZc-h0-waf" secondAttribute="trailing" id="ulw-9n-LWD"/>
+                            <constraint firstItem="VcR-uN-SwM" firstAttribute="top" secondItem="7fS-Hx-1cm" secondAttribute="bottom" constant="20" id="wMj-Tn-RjM"/>
+                            <constraint firstItem="lZc-h0-waf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xze-VZ-uay"/>
+                            <constraint firstItem="c0A-kI-hbp" firstAttribute="leading" secondItem="lZc-h0-waf" secondAttribute="leading" id="zpM-MI-hx5"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
