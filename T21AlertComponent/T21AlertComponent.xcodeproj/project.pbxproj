@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F6373DA1FA0E36600B42B29 /* UIViewController+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F6373D01FA0E36600B42B29 /* UIViewController+Utils.h */; };
+		3F6373DB1FA0E36600B42B29 /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6373D11FA0E36600B42B29 /* UIViewController+Utils.m */; };
+		3F6373DC1FA0E36600B42B29 /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6373D21FA0E36600B42B29 /* NSDate+Utils.m */; };
+		3F6373DD1FA0E36600B42B29 /* NSString+T21ComminUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F6373D31FA0E36600B42B29 /* NSString+T21ComminUtils.h */; };
+		3F6373DE1FA0E36600B42B29 /* UIDevice+T21CommonUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F6373D41FA0E36600B42B29 /* UIDevice+T21CommonUtils.h */; };
+		3F6373DF1FA0E36600B42B29 /* NSDate+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F6373D51FA0E36600B42B29 /* NSDate+Utils.h */; };
+		3F6373E01FA0E36600B42B29 /* NSString+T21ComminUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6373D61FA0E36600B42B29 /* NSString+T21ComminUtils.m */; };
+		3F6373E11FA0E36600B42B29 /* NSURL+T21CommonUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F6373D71FA0E36600B42B29 /* NSURL+T21CommonUtils.h */; };
+		3F6373E21FA0E36600B42B29 /* NSURL+T21CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6373D81FA0E36600B42B29 /* NSURL+T21CommonUtils.m */; };
+		3F6373E31FA0E36600B42B29 /* UIDevice+T21CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6373D91FA0E36600B42B29 /* UIDevice+T21CommonUtils.m */; };
+		3FEFEB321F4D776400CFC0F3 /* T21ServiceComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FEFEB301F4D776400CFC0F3 /* T21ServiceComponent.h */; };
+		3FEFEB331F4D776400CFC0F3 /* T21ServiceComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFEB311F4D776400CFC0F3 /* T21ServiceComponent.m */; };
+		3FEFEB351F4D8E0600CFC0F3 /* T21ServiceComponent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3FEFEB301F4D776400CFC0F3 /* T21ServiceComponent.h */; };
+		4AA51D9D1CF8524300AAC3DE /* T21AlertComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 615CD20F1CF71BFA00FC9975 /* T21AlertComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		615CD2101CF71BFA00FC9975 /* T21AlertComponent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 615CD20F1CF71BFA00FC9975 /* T21AlertComponent.h */; };
+		615CD2121CF71BFA00FC9975 /* T21AlertComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 615CD2111CF71BFA00FC9975 /* T21AlertComponent.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		615CD20A1CF71BF900FC9975 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				3FEFEB351F4D8E0600CFC0F3 /* T21ServiceComponent.h in CopyFiles */,
+				615CD2101CF71BFA00FC9975 /* T21AlertComponent.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3F6373D01FA0E36600B42B29 /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Utils.h"; path = "T21AlertComponent/categories/UIViewController+Utils.h"; sourceTree = SOURCE_ROOT; };
+		3F6373D11FA0E36600B42B29 /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Utils.m"; path = "T21AlertComponent/categories/UIViewController+Utils.m"; sourceTree = SOURCE_ROOT; };
+		3F6373D21FA0E36600B42B29 /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Utils.m"; path = "T21AlertComponent/categories/NSDate+Utils.m"; sourceTree = SOURCE_ROOT; };
+		3F6373D31FA0E36600B42B29 /* NSString+T21ComminUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+T21ComminUtils.h"; path = "T21AlertComponent/categories/NSString+T21ComminUtils.h"; sourceTree = SOURCE_ROOT; };
+		3F6373D41FA0E36600B42B29 /* UIDevice+T21CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIDevice+T21CommonUtils.h"; path = "T21AlertComponent/categories/UIDevice+T21CommonUtils.h"; sourceTree = SOURCE_ROOT; };
+		3F6373D51FA0E36600B42B29 /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Utils.h"; path = "T21AlertComponent/categories/NSDate+Utils.h"; sourceTree = SOURCE_ROOT; };
+		3F6373D61FA0E36600B42B29 /* NSString+T21ComminUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+T21ComminUtils.m"; path = "T21AlertComponent/categories/NSString+T21ComminUtils.m"; sourceTree = SOURCE_ROOT; };
+		3F6373D71FA0E36600B42B29 /* NSURL+T21CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+T21CommonUtils.h"; path = "T21AlertComponent/categories/NSURL+T21CommonUtils.h"; sourceTree = SOURCE_ROOT; };
+		3F6373D81FA0E36600B42B29 /* NSURL+T21CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+T21CommonUtils.m"; path = "T21AlertComponent/categories/NSURL+T21CommonUtils.m"; sourceTree = SOURCE_ROOT; };
+		3F6373D91FA0E36600B42B29 /* UIDevice+T21CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+T21CommonUtils.m"; path = "T21AlertComponent/categories/UIDevice+T21CommonUtils.m"; sourceTree = SOURCE_ROOT; };
+		3FEFEB301F4D776400CFC0F3 /* T21ServiceComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T21ServiceComponent.h; sourceTree = "<group>"; };
+		3FEFEB311F4D776400CFC0F3 /* T21ServiceComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T21ServiceComponent.m; sourceTree = "<group>"; };
+		615CD20C1CF71BF900FC9975 /* libT21AlertComponent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libT21AlertComponent.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		615CD20F1CF71BFA00FC9975 /* T21AlertComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = T21AlertComponent.h; sourceTree = "<group>"; };
+		615CD2111CF71BFA00FC9975 /* T21AlertComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = T21AlertComponent.m; sourceTree = "<group>"; };
+		615CD4571CF71DF200FC9975 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		615CD2091CF71BF900FC9975 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F6373CF1FA0E35100B42B29 /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				3F6373D51FA0E36600B42B29 /* NSDate+Utils.h */,
+				3F6373D21FA0E36600B42B29 /* NSDate+Utils.m */,
+				3F6373D31FA0E36600B42B29 /* NSString+T21ComminUtils.h */,
+				3F6373D61FA0E36600B42B29 /* NSString+T21ComminUtils.m */,
+				3F6373D71FA0E36600B42B29 /* NSURL+T21CommonUtils.h */,
+				3F6373D81FA0E36600B42B29 /* NSURL+T21CommonUtils.m */,
+				3F6373D41FA0E36600B42B29 /* UIDevice+T21CommonUtils.h */,
+				3F6373D91FA0E36600B42B29 /* UIDevice+T21CommonUtils.m */,
+				3F6373D01FA0E36600B42B29 /* UIViewController+Utils.h */,
+				3F6373D11FA0E36600B42B29 /* UIViewController+Utils.m */,
+			);
+			name = categories;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		615CD2031CF71BF900FC9975 = {
+			isa = PBXGroup;
+			children = (
+				615CD20E1CF71BFA00FC9975 /* T21AlertComponent */,
+				615CD20D1CF71BF900FC9975 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		615CD20D1CF71BF900FC9975 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				615CD20C1CF71BF900FC9975 /* libT21AlertComponent.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		615CD20E1CF71BFA00FC9975 /* T21AlertComponent */ = {
+			isa = PBXGroup;
+			children = (
+				615CD4571CF71DF200FC9975 /* Constants.h */,
+				615CD20F1CF71BFA00FC9975 /* T21AlertComponent.h */,
+				615CD2111CF71BFA00FC9975 /* T21AlertComponent.m */,
+				3FEFEB301F4D776400CFC0F3 /* T21ServiceComponent.h */,
+				3FEFEB311F4D776400CFC0F3 /* T21ServiceComponent.m */,
+				3F6373CF1FA0E35100B42B29 /* categories */,
+			);
+			path = T21AlertComponent;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4AA51D9C1CF8523B00AAC3DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6373DA1FA0E36600B42B29 /* UIViewController+Utils.h in Headers */,
+				3F6373DE1FA0E36600B42B29 /* UIDevice+T21CommonUtils.h in Headers */,
+				3F6373DD1FA0E36600B42B29 /* NSString+T21ComminUtils.h in Headers */,
+				3F6373DF1FA0E36600B42B29 /* NSDate+Utils.h in Headers */,
+				3FEFEB321F4D776400CFC0F3 /* T21ServiceComponent.h in Headers */,
+				4AA51D9D1CF8524300AAC3DE /* T21AlertComponent.h in Headers */,
+				3F6373E11FA0E36600B42B29 /* NSURL+T21CommonUtils.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		615CD20B1CF71BF900FC9975 /* T21AlertComponent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 615CD2151CF71BFA00FC9975 /* Build configuration list for PBXNativeTarget "T21AlertComponent" */;
+			buildPhases = (
+				615CD2081CF71BF900FC9975 /* Sources */,
+				615CD2091CF71BF900FC9975 /* Frameworks */,
+				615CD20A1CF71BF900FC9975 /* CopyFiles */,
+				4AA51D9B1CF851B100AAC3DE /* ShellScript */,
+				4AA51D9C1CF8523B00AAC3DE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = T21AlertComponent;
+			productName = T21AlertComponent;
+			productReference = 615CD20C1CF71BF900FC9975 /* libT21AlertComponent.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		615CD2041CF71BF900FC9975 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Tempos21;
+				TargetAttributes = {
+					615CD20B1CF71BF900FC9975 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 615CD2071CF71BF900FC9975 /* Build configuration list for PBXProject "T21AlertComponent" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 615CD2031CF71BF900FC9975;
+			productRefGroup = 615CD20D1CF71BF900FC9975 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				615CD20B1CF71BF900FC9975 /* T21AlertComponent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AA51D9B1CF851B100AAC3DE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "##########################################\n#\n# c.f. http://stackoverflow.com/questions/3520977/build-fat-static-library-device-simulator-using-xcode-and-sdk-4\n#\n# Version 2.82\n#\n# Latest Change:\n# - MORE tweaks to get the iOS 10+ and 9- working\n# - Support iOS 10+\n# - Corrected typo for iOS 1-10+ (thanks @stuikomma)\n#\n# Purpose:\n#   Automatically create a Universal static library for iPhone + iPad + iPhone Simulator from within XCode\n#\n# Author: Adam Martin - http://twitter.com/redglassesapps\n# Based on: original script from Eonil (main changes: Eonil's script WILL NOT WORK in Xcode GUI - it WILL CRASH YOUR COMPUTER)\n#\n\nset -e\nset -o pipefail\n\n#################[ Tests: helps workaround any future bugs in Xcode ]########\n#\nDEBUG_THIS_SCRIPT=\"false\"\n\nif [ $DEBUG_THIS_SCRIPT = \"true\" ]\nthen\necho \"########### TESTS #############\"\necho \"Use the following variables when debugging this script; note that they may change on recursions\"\necho \"BUILD_DIR = $BUILD_DIR\"\necho \"BUILD_ROOT = $BUILD_ROOT\"\necho \"CONFIGURATION_BUILD_DIR = $CONFIGURATION_BUILD_DIR\"\necho \"BUILT_PRODUCTS_DIR = $BUILT_PRODUCTS_DIR\"\necho \"CONFIGURATION_TEMP_DIR = $CONFIGURATION_TEMP_DIR\"\necho \"TARGET_BUILD_DIR = $TARGET_BUILD_DIR\"\nfi\n\n#####################[ part 1 ]##################\n# First, work out the BASESDK version number (NB: Apple ought to report this, but they hide it)\n#    (incidental: searching for substrings in sh is a nightmare! Sob)\n\nSDK_VERSION=$(echo ${SDK_NAME} | grep -o '\\d\\{1,2\\}\\.\\d\\{1,2\\}$')\n\n# Next, work out if we're in SIM or DEVICE\n\nif [ ${PLATFORM_NAME} = \"iphonesimulator\" ]\nthen\nOTHER_SDK_TO_BUILD=iphoneos${SDK_VERSION}\nelse\nOTHER_SDK_TO_BUILD=iphonesimulator${SDK_VERSION}\nfi\n\necho \"XCode has selected SDK: ${PLATFORM_NAME} with version: ${SDK_VERSION} (although back-targetting: ${IPHONEOS_DEPLOYMENT_TARGET})\"\necho \"...therefore, OTHER_SDK_TO_BUILD = ${OTHER_SDK_TO_BUILD}\"\n#\n#####################[ end of part 1 ]##################\n\n#####################[ part 2 ]##################\n#\n# IF this is the original invocation, invoke WHATEVER other builds are required\n#\n# Xcode is already building ONE target...\n#\n# ...but this is a LIBRARY, so Apple is wrong to set it to build just one.\n# ...we need to build ALL targets\n# ...we MUST NOT re-build the target that is ALREADY being built: Xcode WILL CRASH YOUR COMPUTER if you try this (infinite recursion!)\n#\n#\n# So: build ONLY the missing platforms/configurations.\n\nif [ \"true\" == ${ALREADYINVOKED:-false} ]\nthen\necho \"RECURSION: I am NOT the root invocation, so I'm NOT going to recurse\"\nelse\n# CRITICAL:\n# Prevent infinite recursion (Xcode sucks)\nexport ALREADYINVOKED=\"true\"\n\necho \"RECURSION: I am the root ... recursing all missing build targets NOW...\"\necho \"RECURSION: ...about to invoke: xcodebuild -configuration \\\"${CONFIGURATION}\\\" -project \\\"${PROJECT_NAME}.xcodeproj\\\" -target \\\"${TARGET_NAME}\\\" -sdk \\\"${OTHER_SDK_TO_BUILD}\\\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO\" BUILD_DIR=\\\"${BUILD_DIR}\\\" BUILD_ROOT=\\\"${BUILD_ROOT}\\\" SYMROOT=\\\"${SYMROOT}\\\"\n\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}.xcodeproj\" -target \"${TARGET_NAME}\" -sdk \"${OTHER_SDK_TO_BUILD}\" ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\"\n\nACTION=\"build\"\n\n#Merge all platform binaries as a fat binary for each configurations.\n\n# Calculate where the (multiple) built files are coming from:\nCURRENTCONFIG_DEVICE_DIR=${SYMROOT}/${CONFIGURATION}-iphoneos\nCURRENTCONFIG_SIMULATOR_DIR=${SYMROOT}/${CONFIGURATION}-iphonesimulator\n\necho \"Taking device build from: ${CURRENTCONFIG_DEVICE_DIR}\"\necho \"Taking simulator build from: ${CURRENTCONFIG_SIMULATOR_DIR}\"\n\nCREATING_UNIVERSAL_DIR=${SYMROOT}/${CONFIGURATION}-universal\necho \"...I will output a universal build to: ${CREATING_UNIVERSAL_DIR}\"\n\n# ... remove the products of previous runs of this script\n#      NB: this directory is ONLY created by this script - it should be safe to delete!\n\nrm -rf \"${CREATING_UNIVERSAL_DIR}\"\nmkdir \"${CREATING_UNIVERSAL_DIR}\"\n\n#\necho \"lipo: for current configuration (${CONFIGURATION}) creating output file: ${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\"\nxcrun -sdk iphoneos lipo -create -output \"${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}\" \"${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}\"\n\n#########\n#\n# Added: StackOverflow suggestion to also copy \"include\" files\n#    (untested, but should work OK)\n#\necho \"Fetching headers from ${PUBLIC_HEADERS_FOLDER_PATH}\"\necho \"  (if you embed your library project in another project, you will need to add\"\necho \"   a \"User Search Headers\" build setting of: (NB INCLUDE THE DOUBLE QUOTES BELOW!)\"\necho '        \"$(TARGET_BUILD_DIR)/usr/local/include/\"'\nif [ -d \"${CURRENTCONFIG_DEVICE_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\" ]\nthen\nmkdir -p \"${CREATING_UNIVERSAL_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"\n# * needs to be outside the double quotes?\ncp -r \"${CURRENTCONFIG_DEVICE_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"* \"${CREATING_UNIVERSAL_DIR}${PUBLIC_HEADERS_FOLDER_PATH}\"\nfi\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		615CD2081CF71BF900FC9975 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6373E31FA0E36600B42B29 /* UIDevice+T21CommonUtils.m in Sources */,
+				3F6373E01FA0E36600B42B29 /* NSString+T21ComminUtils.m in Sources */,
+				3F6373DC1FA0E36600B42B29 /* NSDate+Utils.m in Sources */,
+				3FEFEB331F4D776400CFC0F3 /* T21ServiceComponent.m in Sources */,
+				3F6373E21FA0E36600B42B29 /* NSURL+T21CommonUtils.m in Sources */,
+				3F6373DB1FA0E36600B42B29 /* UIViewController+Utils.m in Sources */,
+				615CD2121CF71BFA00FC9975 /* T21AlertComponent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		615CD2131CF71BFA00FC9975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_MASTER_OBJECT_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lxml2";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		615CD2141CF71BFA00FC9975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_MASTER_OBJECT_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lxml2";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		615CD2161CF71BFA00FC9975 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
+			};
+			name = Debug;
+		};
+		615CD2171CF71BFA00FC9975 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s i386 x86_64";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		615CD2071CF71BF900FC9975 /* Build configuration list for PBXProject "T21AlertComponent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				615CD2131CF71BFA00FC9975 /* Debug */,
+				615CD2141CF71BFA00FC9975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		615CD2151CF71BFA00FC9975 /* Build configuration list for PBXNativeTarget "T21AlertComponent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				615CD2161CF71BFA00FC9975 /* Debug */,
+				615CD2171CF71BFA00FC9975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 615CD2041CF71BF900FC9975 /* Project object */;
+}
