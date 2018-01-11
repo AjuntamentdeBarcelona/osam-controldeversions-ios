@@ -1,0 +1,24 @@
+{
+  "name": "VersionControl",
+  "version": "2.1",
+  "license": {
+    "type": "BSD"
+  },
+  "homepage": "https://gitlab.dtibcn.cat/osam_ios/control_versions_ios.git",
+  "summary": "VersionControl offers helper methods to alert the user when there is a new version of the app",
+  "authors": {
+    "Salvador Martin": "salvador.martin@worldline.com"
+  },
+  "source": {
+    "git": "https://gitlab.dtibcn.cat/osam_ios/control_versions_ios.git",
+    "tag": "2.1"
+  },
+  "source_files": [
+    "T21AlertComponent/T21AlertComponent/**/*.{h,m}",
+    "T21AlertComponent/T21AlertComponent/categories/**/*.{h,m}"
+  ],
+  "requires_arc": true,
+  "platforms": {
+    "ios": "9.0"
+  }
+}

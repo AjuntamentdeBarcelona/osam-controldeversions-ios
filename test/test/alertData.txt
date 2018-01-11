@@ -1,0 +1,9 @@
+{
+"version":"2.1.1",
+"comparisonMode":"0",
+"title":"Alert Title",
+"message":"This is the message of the alert from service URL.",
+"okButtonTitle":"Open URL",
+"okButtonActionURL":"http://www.apple.com",
+"cancelButtonTitle":"Cancel"
+}
