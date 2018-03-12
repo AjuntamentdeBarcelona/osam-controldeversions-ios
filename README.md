@@ -6,7 +6,7 @@
 - Per fer servir el mòdul de control de versions, cal afegir al fitxer Podfile la ubicació del repositori:
 
 ```
-pod 'VersionControl', :git => 'https://github.com/AjuntamentdeBarcelona/osam-controldeversions-ios.git', :tag => '2.3'
+pod 'VersionControl', :git => 'https://github.com/AjuntamentdeBarcelona/osam-controldeversions-ios.git', :tag => '2.4'
 ```
 - i actualitzar mitjançant la comanda 'pod update' les dependències.
 
