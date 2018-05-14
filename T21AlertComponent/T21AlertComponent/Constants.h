@@ -31,4 +31,7 @@ static NSString *const kGooltrackingEnable = @"gooltracking_enable";
 static NSString *const kDataIniciActivacio = @"data_inici_activacio";
 static NSString *const kDataFiActivacio = @"data_fi_activacio";
 
+static NSString *const kLegalVersionKeyName = @"legal_version";
+static NSString *const kLegalURLKeyName = @"legal_URL";
+
 #endif /* Constants_h */
