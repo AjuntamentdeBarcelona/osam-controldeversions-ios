@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LegalConditions">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="411"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGN-co-DXV">
+                    <rect key="frame" x="0.0" y="355" width="375" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="I5h-VB-V3F"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="06b-l0-iSU">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="355"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="VGN-co-DXV" secondAttribute="bottom" id="3OS-Ph-KVb"/>
+                <constraint firstItem="06b-l0-iSU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DJE-ZW-Pwm"/>
+                <constraint firstItem="VGN-co-DXV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Hz5-1N-gaf"/>
+                <constraint firstAttribute="trailing" secondItem="VGN-co-DXV" secondAttribute="trailing" id="aRB-Rs-e3e"/>
+                <constraint firstItem="06b-l0-iSU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kDv-fb-qDw"/>
+                <constraint firstItem="VGN-co-DXV" firstAttribute="top" secondItem="06b-l0-iSU" secondAttribute="bottom" id="lpr-sZ-ZUz"/>
+                <constraint firstAttribute="trailing" secondItem="06b-l0-iSU" secondAttribute="trailing" id="wgk-IX-PEQ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="legalConditionsAcceptButton" destination="VGN-co-DXV" id="pON-3N-sxz"/>
+                <outlet property="legalConditionsWebView" destination="06b-l0-iSU" id="Zoq-lj-Xay"/>
+            </connections>
+            <point key="canvasLocation" x="125.5" y="181.5"/>
+        </view>
+    </objects>
+</document>
