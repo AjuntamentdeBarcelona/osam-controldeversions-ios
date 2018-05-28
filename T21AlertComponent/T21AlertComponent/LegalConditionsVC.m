@@ -19,11 +19,11 @@
 
 @implementation LegalConditionsVC
 
--(instancetype)initWithColorDict:(NSDictionary *)colorDict
+-(instancetype)initWithConfigDict:(NSDictionary *)configDict
 {
     self = [super initWithNibName:nil bundle:nil];
     if(self) {
-        self.colorDict = colorDict;
+        self.configDict = configDict;
     }
     return self;
 }
@@ -32,16 +32,53 @@
     [super viewDidLoad];
     
     self.legalConditionsWebView.delegate = self;
-    
-    self.legalConditionsWebView.backgroundColor = self.colorDict[legal_background_color];
-    self.legalConditionsAcceptButton.backgroundColor = self.colorDict[legal_primary_color];
-    self.legalConditionsAcceptButton.tintColor = self.colorDict[legal_text_color];
-    self.legalConditionsButtonContainer.backgroundColor = self.colorDict[legal_background_color];
-    
     [self.legalConditionsAcceptButton setEnabled:NO];
     
     self.circularProgressView.isInfiniteProgress = YES;
-    [self.circularProgressView setProgressLineWidth:3.0f andColor: self.colorDict[legal_primary_color]];
+    
+    UIColor *legalBackgroundColor = self.configDict[legal_background_color];
+    if(legalBackgroundColor) {
+        self.legalConditionsWebView.backgroundColor = legalBackgroundColor;
+        self.legalConditionsButtonContainer.backgroundColor = legalBackgroundColor;
+    }
+    
+    UIColor *legalPrimaryColor = self.configDict[legal_primary_color];
+    if(legalPrimaryColor) {
+        self.legalConditionsAcceptButton.backgroundColor = legalPrimaryColor;
+        [self.circularProgressView setProgressLineWidth:3.0f andColor: legalPrimaryColor];
+    }
+    
+    UIColor *legalTextColor = self.configDict[legal_text_color];
+    if(legalTextColor) {
+        self.legalConditionsAcceptButton.tintColor = legalTextColor;
+    }
+
+    UIImage *legalButtonImage = [UIImage imageNamed:self.configDict[legal_button_image]];
+    if(legalButtonImage) {
+        [self.legalConditionsAcceptButton setBackgroundImage:legalButtonImage forState:UIControlStateNormal];
+        [self.legalConditionsAcceptButton setTitle:@"" forState:UIControlStateNormal];
+        [self.legalConditionsAcceptButton setBackgroundColor:[UIColor clearColor]];
+    }
+    
+    UIImage *legalBackgroundImage = [UIImage imageNamed:self.configDict[legal_background_image]];
+    if(legalBackgroundImage) {
+        [self.legalConditionsBackgroundImageView setImage:legalBackgroundImage];
+    }
+    
+    NSNumber *backgroundHeight = self.configDict[legal_background_image_height];
+    if(backgroundHeight) {
+        self.legalConditionsButtonContainerHeight.constant = backgroundHeight.floatValue;
+    }
+    
+    NSNumber *width = self.configDict[legal_button_width];
+    if(width) {
+        self.legalConditionsButtonWidth.constant = width.floatValue;
+    }
+    
+    NSNumber *buttonHeight = self.configDict[legal_button_height];
+    if(buttonHeight) {
+        self.legalConditionsButtonHeight.constant = buttonHeight.floatValue;
+    }
 }
 
 -(void)loadLegalConditionsURL:(NSString *)URL
@@ -65,7 +102,7 @@
         if (@available(iOS 9.0, *)) {
             SFSafariViewController *safariViewController = [[SFSafariViewController alloc] initWithURL:request.URL];
             if (@available(iOS 10.0, *)) {
-                [safariViewController setPreferredControlTintColor:self.colorDict[legal_primary_color]];
+                [safariViewController setPreferredControlTintColor:self.configDict[legal_primary_color]];
             } else {
                 // Fallback on earlier versions
             }

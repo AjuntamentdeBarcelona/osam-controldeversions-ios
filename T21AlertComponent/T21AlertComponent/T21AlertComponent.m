@@ -9,10 +9,10 @@
 #import "T21AlertComponent.h"
 
 #import "Constants.h"
-#import "UIDevice+T21CommonUtils.h"
-#import "NSURL+T21CommonUtils.h"
-#import "UIViewController+Utils.h"
-#import "NSString+T21ComminUtils.h"
+#import "categories/UIDevice+T21CommonUtils.h"
+#import "categories/NSURL+T21CommonUtils.h"
+#import "categories/UIViewController+Utils.h"
+#import "categories/NSString+T21ComminUtils.h"
 
 @interface T21AlertComponent () <NSURLConnectionDelegate>
 
