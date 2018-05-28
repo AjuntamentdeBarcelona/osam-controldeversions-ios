@@ -8,10 +8,10 @@
 #import "T21LegalComponent.h"
 
 #import "Constants.h"
-#import "NSURL+T21CommonUtils.h"
-#import "NSString+T21ComminUtils.h"
+#import "categories/NSURL+T21CommonUtils.h"
+#import "categories/NSString+T21ComminUtils.h"
 #import "LegalConditionsVC.h"
-#import "UIViewController+Utils.h"
+#import "categories/UIViewController+Utils.h"
 
 @interface T21LegalComponent () <NSURLConnectionDelegate, LegalConditionsVCDelegate>
 
@@ -22,7 +22,7 @@
 
 @property (nonatomic, assign) NSInteger legalVersion;
 @property (nonatomic, copy) NSString *legalURL;
-@property (nonatomic, strong) NSDictionary *colorDict;
+@property (nonatomic, strong) NSDictionary *configDict;
 
 @end
 
@@ -118,7 +118,8 @@
 }
 
 -(void)displayLegalAlertWithURL:(NSString *)URL {
-    LegalConditionsVC *legalConditionsVC = [[LegalConditionsVC alloc] initWithColorDict:self.colorDict];
+    
+    LegalConditionsVC *legalConditionsVC = [[LegalConditionsVC alloc] initWithConfigDict:self.configDict];
     legalConditionsVC.delegate = self;
     UIViewController *vc = [UIViewController currentViewController];
     [vc presentViewController:legalConditionsVC animated:YES
@@ -129,9 +130,9 @@
 
 #pragma mark - Public methods
 
--(void)showLegalWithService:(NSString *)serviceURL withQueryParams:(NSDictionary *)queryParams withColorDict:(NSDictionary *)colorDict withCompletionBlock:(void (^)(NSError *))completionBlock
+-(void)showLegalWithService:(NSString *)serviceURL withQueryParams:(NSDictionary *)queryParams withConfigDict:(NSDictionary *)configDict withCompletionBlock:(void (^)(NSError *))completionBlock
 {
-    self.colorDict = colorDict;
+    self.configDict = configDict;
     
     self.serviceKeys = @{@(eGALegalVersionKey) : kLegalVersionKeyName,
                          @(eGALegalURLKey) : kLegalURLKeyName};
