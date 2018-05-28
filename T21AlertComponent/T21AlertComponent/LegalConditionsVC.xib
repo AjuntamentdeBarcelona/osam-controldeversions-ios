@@ -28,11 +28,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtV-Gv-75k">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="595"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="575"/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </webView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mK3-Fk-kxx" customClass="LCCircularProgressView">
-                    <rect key="frame" x="164.5" y="275" width="45" height="45"/>
+                    <rect key="frame" x="164.5" y="285" width="45" height="45"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="GcO-A4-sHT"/>
@@ -75,14 +75,14 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="mK3-Fk-kxx" firstAttribute="centerX" secondItem="vtV-Gv-75k" secondAttribute="centerX" id="2rO-No-nbu"/>
-                <constraint firstItem="qYO-gR-hhm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6O5-cw-Pe8"/>
-                <constraint firstItem="vtV-Gv-75k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="99H-Rj-tp5"/>
+                <constraint firstItem="qYO-gR-hhm" firstAttribute="leading" secondItem="Jh4-nm-6a6" secondAttribute="leading" id="6O5-cw-Pe8"/>
+                <constraint firstItem="vtV-Gv-75k" firstAttribute="top" secondItem="Jh4-nm-6a6" secondAttribute="top" id="99H-Rj-tp5"/>
                 <constraint firstItem="mK3-Fk-kxx" firstAttribute="centerY" secondItem="vtV-Gv-75k" secondAttribute="centerY" id="M3i-KM-Npa"/>
                 <constraint firstItem="qYO-gR-hhm" firstAttribute="top" secondItem="vtV-Gv-75k" secondAttribute="bottom" id="Nak-Oh-hdT"/>
-                <constraint firstAttribute="trailing" secondItem="qYO-gR-hhm" secondAttribute="trailing" id="SUk-p7-6rp"/>
-                <constraint firstItem="vtV-Gv-75k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bkd-9z-nuX"/>
-                <constraint firstAttribute="bottom" secondItem="qYO-gR-hhm" secondAttribute="bottom" id="qbO-Ke-vM6"/>
-                <constraint firstAttribute="trailing" secondItem="vtV-Gv-75k" secondAttribute="trailing" id="tOt-bd-cIX"/>
+                <constraint firstItem="Jh4-nm-6a6" firstAttribute="trailing" secondItem="qYO-gR-hhm" secondAttribute="trailing" id="SUk-p7-6rp"/>
+                <constraint firstItem="vtV-Gv-75k" firstAttribute="leading" secondItem="Jh4-nm-6a6" secondAttribute="leading" id="bkd-9z-nuX"/>
+                <constraint firstItem="Jh4-nm-6a6" firstAttribute="bottom" secondItem="qYO-gR-hhm" secondAttribute="bottom" id="qbO-Ke-vM6"/>
+                <constraint firstItem="Jh4-nm-6a6" firstAttribute="trailing" secondItem="vtV-Gv-75k" secondAttribute="trailing" id="tOt-bd-cIX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Jh4-nm-6a6"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
