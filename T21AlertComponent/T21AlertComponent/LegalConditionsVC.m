@@ -21,7 +21,7 @@
 
 -(instancetype)initWithConfigDict:(NSDictionary *)configDict
 {
-    self = [super initWithNibName:nil bundle:nil];
+    self = [super initWithNibName:@"LegalConditionsVC" bundle:[NSBundle bundleForClass:self.classForCoder]];
     if(self) {
         self.configDict = configDict;
     }
