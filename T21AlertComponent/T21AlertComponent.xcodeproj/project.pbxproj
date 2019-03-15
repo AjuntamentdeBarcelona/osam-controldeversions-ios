@@ -17,6 +17,13 @@
 		3F6373E11FA0E36600B42B29 /* NSURL+T21CommonUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F6373D71FA0E36600B42B29 /* NSURL+T21CommonUtils.h */; };
 		3F6373E21FA0E36600B42B29 /* NSURL+T21CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6373D81FA0E36600B42B29 /* NSURL+T21CommonUtils.m */; };
 		3F6373E31FA0E36600B42B29 /* UIDevice+T21CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6373D91FA0E36600B42B29 /* UIDevice+T21CommonUtils.m */; };
+		3FC62B19223BCBB1007BFD3A /* LegalConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC62B12223BCBB1007BFD3A /* LegalConditionsVC.m */; };
+		3FC62B1A223BCBB1007BFD3A /* T21LegalComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC62B13223BCBB1007BFD3A /* T21LegalComponent.m */; };
+		3FC62B1B223BCBB1007BFD3A /* LCCircularProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FC62B14223BCBB1007BFD3A /* LCCircularProgressView.h */; };
+		3FC62B1C223BCBB1007BFD3A /* T21LegalComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FC62B16223BCBB1007BFD3A /* T21LegalComponent.h */; };
+		3FC62B1D223BCBB1007BFD3A /* LegalConditionsVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FC62B17223BCBB1007BFD3A /* LegalConditionsVC.h */; };
+		3FC62B1E223BCBB1007BFD3A /* LCCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC62B18223BCBB1007BFD3A /* LCCircularProgressView.m */; };
+		3FC62B20223BD212007BFD3A /* LegalConditionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC62B15223BCBB1007BFD3A /* LegalConditionsVC.xib */; };
 		3FEFEB321F4D776400CFC0F3 /* T21ServiceComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FEFEB301F4D776400CFC0F3 /* T21ServiceComponent.h */; };
 		3FEFEB331F4D776400CFC0F3 /* T21ServiceComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFEB311F4D776400CFC0F3 /* T21ServiceComponent.m */; };
 		3FEFEB351F4D8E0600CFC0F3 /* T21ServiceComponent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3FEFEB301F4D776400CFC0F3 /* T21ServiceComponent.h */; };
@@ -50,6 +57,13 @@
 		3F6373D71FA0E36600B42B29 /* NSURL+T21CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+T21CommonUtils.h"; path = "T21AlertComponent/categories/NSURL+T21CommonUtils.h"; sourceTree = SOURCE_ROOT; };
 		3F6373D81FA0E36600B42B29 /* NSURL+T21CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+T21CommonUtils.m"; path = "T21AlertComponent/categories/NSURL+T21CommonUtils.m"; sourceTree = SOURCE_ROOT; };
 		3F6373D91FA0E36600B42B29 /* UIDevice+T21CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+T21CommonUtils.m"; path = "T21AlertComponent/categories/UIDevice+T21CommonUtils.m"; sourceTree = SOURCE_ROOT; };
+		3FC62B12223BCBB1007BFD3A /* LegalConditionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LegalConditionsVC.m; sourceTree = "<group>"; };
+		3FC62B13223BCBB1007BFD3A /* T21LegalComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T21LegalComponent.m; sourceTree = "<group>"; };
+		3FC62B14223BCBB1007BFD3A /* LCCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCCircularProgressView.h; path = categories/LCCircularProgressView.h; sourceTree = "<group>"; };
+		3FC62B15223BCBB1007BFD3A /* LegalConditionsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LegalConditionsVC.xib; sourceTree = "<group>"; };
+		3FC62B16223BCBB1007BFD3A /* T21LegalComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T21LegalComponent.h; sourceTree = "<group>"; };
+		3FC62B17223BCBB1007BFD3A /* LegalConditionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegalConditionsVC.h; sourceTree = "<group>"; };
+		3FC62B18223BCBB1007BFD3A /* LCCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCCircularProgressView.m; path = categories/LCCircularProgressView.m; sourceTree = "<group>"; };
 		3FEFEB301F4D776400CFC0F3 /* T21ServiceComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = T21ServiceComponent.h; sourceTree = "<group>"; };
 		3FEFEB311F4D776400CFC0F3 /* T21ServiceComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = T21ServiceComponent.m; sourceTree = "<group>"; };
 		615CD20C1CF71BF900FC9975 /* libT21AlertComponent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libT21AlertComponent.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +120,13 @@
 		615CD20E1CF71BFA00FC9975 /* T21AlertComponent */ = {
 			isa = PBXGroup;
 			children = (
+				3FC62B14223BCBB1007BFD3A /* LCCircularProgressView.h */,
+				3FC62B18223BCBB1007BFD3A /* LCCircularProgressView.m */,
+				3FC62B17223BCBB1007BFD3A /* LegalConditionsVC.h */,
+				3FC62B12223BCBB1007BFD3A /* LegalConditionsVC.m */,
+				3FC62B15223BCBB1007BFD3A /* LegalConditionsVC.xib */,
+				3FC62B16223BCBB1007BFD3A /* T21LegalComponent.h */,
+				3FC62B13223BCBB1007BFD3A /* T21LegalComponent.m */,
 				615CD4571CF71DF200FC9975 /* Constants.h */,
 				615CD20F1CF71BFA00FC9975 /* T21AlertComponent.h */,
 				615CD2111CF71BFA00FC9975 /* T21AlertComponent.m */,
@@ -125,9 +146,12 @@
 			files = (
 				3F6373DA1FA0E36600B42B29 /* UIViewController+Utils.h in Headers */,
 				3F6373DE1FA0E36600B42B29 /* UIDevice+T21CommonUtils.h in Headers */,
+				3FC62B1B223BCBB1007BFD3A /* LCCircularProgressView.h in Headers */,
+				3FC62B1D223BCBB1007BFD3A /* LegalConditionsVC.h in Headers */,
 				3F6373DD1FA0E36600B42B29 /* NSString+T21ComminUtils.h in Headers */,
 				3F6373DF1FA0E36600B42B29 /* NSDate+Utils.h in Headers */,
 				3FEFEB321F4D776400CFC0F3 /* T21ServiceComponent.h in Headers */,
+				3FC62B1C223BCBB1007BFD3A /* T21LegalComponent.h in Headers */,
 				4AA51D9D1CF8524300AAC3DE /* T21AlertComponent.h in Headers */,
 				3F6373E11FA0E36600B42B29 /* NSURL+T21CommonUtils.h in Headers */,
 			);
@@ -145,6 +169,7 @@
 				615CD20A1CF71BF900FC9975 /* CopyFiles */,
 				4AA51D9B1CF851B100AAC3DE /* ShellScript */,
 				4AA51D9C1CF8523B00AAC3DE /* Headers */,
+				3FC62B1F223BD20D007BFD3A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -186,6 +211,17 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		3FC62B1F223BD20D007BFD3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC62B20223BD212007BFD3A /* LegalConditionsVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
 		4AA51D9B1CF851B100AAC3DE /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -208,11 +244,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F6373E31FA0E36600B42B29 /* UIDevice+T21CommonUtils.m in Sources */,
+				3FC62B1E223BCBB1007BFD3A /* LCCircularProgressView.m in Sources */,
 				3F6373E01FA0E36600B42B29 /* NSString+T21ComminUtils.m in Sources */,
 				3F6373DC1FA0E36600B42B29 /* NSDate+Utils.m in Sources */,
+				3FC62B1A223BCBB1007BFD3A /* T21LegalComponent.m in Sources */,
 				3FEFEB331F4D776400CFC0F3 /* T21ServiceComponent.m in Sources */,
 				3F6373E21FA0E36600B42B29 /* NSURL+T21CommonUtils.m in Sources */,
 				3F6373DB1FA0E36600B42B29 /* UIViewController+Utils.m in Sources */,
+				3FC62B19223BCBB1007BFD3A /* LegalConditionsVC.m in Sources */,
 				615CD2121CF71BFA00FC9975 /* T21AlertComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
