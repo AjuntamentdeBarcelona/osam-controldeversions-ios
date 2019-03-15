@@ -23,6 +23,7 @@
 		3FC62B1C223BCBB1007BFD3A /* T21LegalComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FC62B16223BCBB1007BFD3A /* T21LegalComponent.h */; };
 		3FC62B1D223BCBB1007BFD3A /* LegalConditionsVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FC62B17223BCBB1007BFD3A /* LegalConditionsVC.h */; };
 		3FC62B1E223BCBB1007BFD3A /* LCCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC62B18223BCBB1007BFD3A /* LCCircularProgressView.m */; };
+		3FC62B20223BD212007BFD3A /* LegalConditionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC62B15223BCBB1007BFD3A /* LegalConditionsVC.xib */; };
 		3FEFEB321F4D776400CFC0F3 /* T21ServiceComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FEFEB301F4D776400CFC0F3 /* T21ServiceComponent.h */; };
 		3FEFEB331F4D776400CFC0F3 /* T21ServiceComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEFEB311F4D776400CFC0F3 /* T21ServiceComponent.m */; };
 		3FEFEB351F4D8E0600CFC0F3 /* T21ServiceComponent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3FEFEB301F4D776400CFC0F3 /* T21ServiceComponent.h */; };
@@ -168,6 +169,7 @@
 				615CD20A1CF71BF900FC9975 /* CopyFiles */,
 				4AA51D9B1CF851B100AAC3DE /* ShellScript */,
 				4AA51D9C1CF8523B00AAC3DE /* Headers */,
+				3FC62B1F223BD20D007BFD3A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -208,6 +210,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FC62B1F223BD20D007BFD3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC62B20223BD212007BFD3A /* LegalConditionsVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		4AA51D9B1CF851B100AAC3DE /* ShellScript */ = {
