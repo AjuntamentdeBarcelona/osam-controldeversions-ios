@@ -117,8 +117,7 @@
 				61D6B57D1CF6DCCE00415BF5 /* Sources */,
 				61D6B57E1CF6DCCE00415BF5 /* Frameworks */,
 				61D6B57F1CF6DCCE00415BF5 /* Resources */,
-				1F4FD544475DABCCB3CC44A2 /* [CP] Embed Pods Frameworks */,
-				A9687E5D16EF6BAE4E2EFA9D /* [CP] Copy Pods Resources */,
+				BEC020326E85FBA7A1657720 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,30 +176,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1F4FD544475DABCCB3CC44A2 /* [CP] Embed Pods Frameworks */ = {
+		BEC020326E85FBA7A1657720 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-test/Pods-test-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A9687E5D16EF6BAE4E2EFA9D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-test/Pods-test-resources.sh",
+				"${PODS_ROOT}/VersionControl/T21AlertComponent/T21AlertComponent/LegalConditionsVC.xib",
 			);
 			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LegalConditionsVC.nib",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

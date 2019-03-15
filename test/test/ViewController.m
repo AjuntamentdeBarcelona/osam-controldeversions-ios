@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "T21AlertComponent.h"
 #import "T21ServiceComponent.h"
+#import "T21LegalComponent.h"
 
 #define kActionURL_Live 1
 
@@ -80,5 +81,17 @@
         }
     }];*/
 }
+
+
+- (IBAction)alertViewByLegalURL:(id)sender {
+    NSString* legalUrl = @"https://w9.bcn.cat/mobil/apps/controlVersions/butxaca/versionControl_ios.json";
+    
+    [_T21LegalComponent showLegalWithService:legalUrl withQueryParams:nil withConfigDict:nil withCompletionBlock:^(NSError *error) {
+        if(error){
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
 
 @end

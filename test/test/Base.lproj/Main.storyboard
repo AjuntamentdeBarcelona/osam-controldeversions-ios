@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,58 +18,69 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0A-kI-hbp">
-                                <rect key="frame" x="250" y="210" width="100" height="30"/>
+                                <rect key="frame" x="137.5" y="243.5" width="100" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="4xn-W3-vWL"/>
                                 </constraints>
                                 <state key="normal" title="No Buttons">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="alertViewWithoutButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wgi-B3-plL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fS-Hx-1cm">
-                                <rect key="frame" x="250" y="310" width="100" height="30"/>
+                                <rect key="frame" x="137.5" y="343.5" width="100" height="30"/>
                                 <state key="normal" title="OK &amp; Cancel">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="alertViewWithCancelAndOkButtonActionURL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vo6-Yq-fM2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZc-h0-waf">
-                                <rect key="frame" x="250" y="260" width="100" height="30"/>
+                                <rect key="frame" x="137.5" y="293.5" width="100" height="30"/>
                                 <state key="normal" title="Only Ok">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="alertViewWithOkButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w70-kU-vbL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcR-uN-SwM">
-                                <rect key="frame" x="250" y="360" width="100" height="30"/>
+                                <rect key="frame" x="137.5" y="393.5" width="100" height="30"/>
                                 <state key="normal" title="Service URL">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="alertViewByServiceURL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dj-mz-W1Q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGw-58-Aik">
+                                <rect key="frame" x="127" y="446" width="121" height="30"/>
+                                <state key="normal" title="Service legal URL">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertViewByLegalURL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lnb-G0-taZ"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7fS-Hx-1cm" firstAttribute="leading" secondItem="VcR-uN-SwM" secondAttribute="leading" id="12y-76-c2F"/>
                             <constraint firstItem="7fS-Hx-1cm" firstAttribute="top" secondItem="lZc-h0-waf" secondAttribute="bottom" constant="20" id="K5W-1b-oKF"/>
                             <constraint firstItem="7fS-Hx-1cm" firstAttribute="leading" secondItem="lZc-h0-waf" secondAttribute="leading" id="K8m-Tx-iYh"/>
+                            <constraint firstItem="aGw-58-Aik" firstAttribute="centerX" secondItem="VcR-uN-SwM" secondAttribute="centerX" id="Mz1-vv-PlV"/>
                             <constraint firstItem="c0A-kI-hbp" firstAttribute="trailing" secondItem="lZc-h0-waf" secondAttribute="trailing" id="Mzy-mC-5Tn"/>
                             <constraint firstItem="lZc-h0-waf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-25" id="ON4-b7-39v"/>
                             <constraint firstItem="7fS-Hx-1cm" firstAttribute="trailing" secondItem="VcR-uN-SwM" secondAttribute="trailing" id="di0-f3-4ch"/>
                             <constraint firstItem="lZc-h0-waf" firstAttribute="top" secondItem="c0A-kI-hbp" secondAttribute="bottom" constant="20" id="foA-jF-UTq"/>
+                            <constraint firstItem="aGw-58-Aik" firstAttribute="top" secondItem="VcR-uN-SwM" secondAttribute="bottom" constant="22.5" id="iNR-cy-hN3"/>
                             <constraint firstItem="7fS-Hx-1cm" firstAttribute="trailing" secondItem="lZc-h0-waf" secondAttribute="trailing" id="ulw-9n-LWD"/>
                             <constraint firstItem="VcR-uN-SwM" firstAttribute="top" secondItem="7fS-Hx-1cm" secondAttribute="bottom" constant="20" id="wMj-Tn-RjM"/>
                             <constraint firstItem="lZc-h0-waf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xze-VZ-uay"/>
@@ -75,6 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="30.134932533733135"/>
         </scene>
     </scenes>
 </document>
