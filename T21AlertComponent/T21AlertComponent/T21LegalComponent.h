@@ -70,4 +70,12 @@ static NSString *const legal_button_height = @"legal_button_height";
  */
 - (void)showLegalWithService:(NSString *)serviceURL withQueryParams:(NSDictionary *)queryParams withConfigDict:(NSDictionary *)configDict withCompletionBlock:(void(^)(NSError *))completionBlock;
     
+/*!
+ * @discussion Fetch the legal information by the server URL.
+ * @param serviceURL To identify from where we need to fetch the legal information.
+ * @param language
+ * @param completionBlock To execute after accept the conditions.
+ */
+- (void)showLegalWithService:(NSString *)serviceURL withLanguaje:language withCompletionBlock:(void(^)(NSError *, NSString*))completionBlock;
+    
 @end

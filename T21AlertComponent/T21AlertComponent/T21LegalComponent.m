@@ -16,6 +16,8 @@
 @interface T21LegalComponent () <NSURLConnectionDelegate, LegalConditionsVCDelegate>
 
 @property (copy, nonatomic) void (^completionBlock) (NSError*);
+@property (copy, nonatomic) void (^completionBlockURL) (NSError*, NSString*);
+
 @property (strong, nonatomic) NSDictionary *serviceKeys;
 @property (strong, nonatomic) NSMutableData *responseData;
 @property (nonatomic, copy) NSString *language;
@@ -99,19 +101,26 @@
 - (void)parseJSONDict:(NSDictionary *)alertDict withServiceKeys:(NSDictionary *)serviceKeys language:(NSString *)language
 {
     if (alertDict) {
-        self.legalVersion = [alertDict[serviceKeys[@(eGALegalVersionKey)]] integerValue];
+      //  self.legalVersion = [alertDict[serviceKeys[@(eGALegalVersionKey)]] integerValue];
         self.legalURL = alertDict[serviceKeys[@(eGALegalURLKey)]];
         
-        NSNumber *legalVersionLocal = [self userDefaultsLegalVersion];
+        //NSNumber *legalVersionLocal = [self userDefaultsLegalVersion];
         
-        if(legalVersionLocal && ([legalVersionLocal integerValue] >= self.legalVersion)) {
+       /* if(legalVersionLocal && ([legalVersionLocal integerValue] >= self.legalVersion)) {
 
             if (self.completionBlock) {
                 self.completionBlock(nil);
             }
         } else {
             [self displayLegalAlertWithURL:self.legalURL];
+        }*/
+        if(self.completionBlock != nil){
+            [self displayLegalAlertWithURL:self.legalURL];
         }
+        else{
+            self.completionBlockURL(nil, self.legalURL);
+        }
+        
     } else {
         self.completionBlock([NSError errorWithDomain:@"Error getting data" code:0 userInfo:nil]);
     }
@@ -146,6 +155,18 @@
     [self showAlertWithService:serviceURL withServiceKeys:_serviceKeys language:nil andCompletionBlock:completionBlock];
 }
 
+- (void)showLegalWithService:(NSString *)serviceURL withLanguaje:language withCompletionBlock:(void(^)(NSError *, NSString*))completionBlock
+{
+    // self.configDict = configDict;
+    
+    self.serviceKeys = @{@(eGALegalVersionKey) : kLegalVersionKeyName,
+                         @(eGALegalURLKey) : kLegalURLKeyName};
+    
+    
+    [self showAlertWithService:serviceURL language:language andCompletionBlock:completionBlock];
+}
+
+
 - (void)showAlertWithService:(NSString *)serviceURL withServiceKeys:(NSDictionary *)serviceKeys language:(NSString *)language andCompletionBlock:(void(^)(NSError *))completionBlock;
 {
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:serviceURL]];
@@ -156,6 +177,19 @@
         self.completionBlock = completionBlock;
     }
 }
+    
+- (void)showAlertWithService:(NSString *)serviceURL language:(NSString *)language andCompletionBlock:(void(^)(NSError *,NSString *))completionBlock;
+{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:serviceURL]];
+    // Create url connection and fire request
+    __unused NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    self.language = language;
+    
+    if (completionBlock) {
+        self.completionBlockURL = completionBlock;
+    }
+}
+    
 
 #pragma mark LegalConditionsVCDelegate
 -(void)legalConditionsVCDidPressAccept:(LegalConditionsVC *)legalConditionsVC
