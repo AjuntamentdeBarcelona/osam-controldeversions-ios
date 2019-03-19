@@ -87,7 +87,7 @@
     if (jsonData) {
         NSError *errorInfo = nil;
         NSDictionary *alertDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&errorInfo];
-        
+
         if (errorInfo) {
             self.completionBlock([NSError errorWithDomain:@"Error parsing data" code:0 userInfo:nil]);
         }else {
@@ -100,34 +100,34 @@
 
 - (void)parseJSONDict:(NSDictionary *)alertDict withServiceKeys:(NSDictionary *)serviceKeys language:(NSString *)language
 {
-    if (alertDict) {
-      //  self.legalVersion = [alertDict[serviceKeys[@(eGALegalVersionKey)]] integerValue];
-        self.legalURL = alertDict[serviceKeys[@(eGALegalURLKey)]];
-        
-        //NSNumber *legalVersionLocal = [self userDefaultsLegalVersion];
-        
-       /* if(legalVersionLocal && ([legalVersionLocal integerValue] >= self.legalVersion)) {
+  if (alertDict) {
+          //  self.legalVersion = [alertDict[serviceKeys[@(eGALegalVersionKey)]] integerValue];
+          self.legalURL = [self getTextFromDictionary:alertDict withServiceKeys:serviceKeys language:self.language andKey:eGALegalURLKey];
 
-            if (self.completionBlock) {
-                self.completionBlock(nil);
-            }
-        } else {
-            [self displayLegalAlertWithURL:self.legalURL];
-        }*/
-        if(self.completionBlock != nil){
-            [self displayLegalAlertWithURL:self.legalURL];
-        }
-        else{
-            self.completionBlockURL(nil, self.legalURL);
-        }
-        
-    } else {
-        self.completionBlock([NSError errorWithDomain:@"Error getting data" code:0 userInfo:nil]);
-    }
+          //NSNumber *legalVersionLocal = [self userDefaultsLegalVersion];
+
+          /* if(legalVersionLocal && ([legalVersionLocal integerValue] >= self.legalVersion)) {
+
+           if (self.completionBlock) {
+           self.completionBlock(nil);
+           }
+           } else {
+           [self displayLegalAlertWithURL:self.legalURL];
+           }*/
+          if(self.completionBlock != nil){
+              [self displayLegalAlertWithURL:self.legalURL];
+          }
+          else{
+              self.completionBlockURL(nil, self.legalURL);
+          }
+
+      } else {
+          self.completionBlock([NSError errorWithDomain:@"Error getting data" code:0 userInfo:nil]);
+      }
 }
 
 -(void)displayLegalAlertWithURL:(NSString *)URL {
-    
+
     LegalConditionsVC *legalConditionsVC = [[LegalConditionsVC alloc] initWithConfigDict:self.configDict];
     legalConditionsVC.delegate = self;
     UIViewController *vc = [UIViewController currentViewController];
@@ -137,32 +137,50 @@
                    }];
 }
 
+- (NSString *)getTextFromDictionary:(NSDictionary *)dictionary withServiceKeys:(NSDictionary *)serviceKeys language:(NSString *)language andKey:(T21GALegalKeysEnum)key
+{
+    NSString *resultText;
+    if ([dictionary[serviceKeys[@(key)]] isKindOfClass:[NSDictionary class]]) {
+        NSDictionary *messageDic = dictionary[serviceKeys[@(key)]];
+        if (language && ![language isEqualToString:@""]) {
+            NSString *selectedText = messageDic[language];
+            resultText = selectedText ? : [[messageDic allValues] firstObject];
+        }else {
+            resultText = [[messageDic allValues] firstObject];
+        }
+    }else if ([dictionary[serviceKeys[@(key)]] isKindOfClass:[NSString class]]) {
+        resultText = dictionary[serviceKeys[@(key)]];
+    }
+
+    return resultText;
+}
+
 #pragma mark - Public methods
 
 -(void)showLegalWithService:(NSString *)serviceURL withQueryParams:(NSDictionary *)queryParams withConfigDict:(NSDictionary *)configDict withCompletionBlock:(void (^)(NSError *))completionBlock
 {
     self.configDict = configDict;
-    
+
     self.serviceKeys = @{@(eGALegalVersionKey) : kLegalVersionKeyName,
                          @(eGALegalURLKey) : kLegalURLKeyName};
-    
+
     //parsing query parameters
     if (queryParams) {
         NSString * queryString = [NSString URLQueryWithParameters:queryParams];
         serviceURL = [serviceURL stringByAppendingURLQuery:queryString];
     }
-    
+
     [self showAlertWithService:serviceURL withServiceKeys:_serviceKeys language:nil andCompletionBlock:completionBlock];
 }
 
 - (void)showLegalWithService:(NSString *)serviceURL withLanguaje:language withCompletionBlock:(void(^)(NSError *, NSString*))completionBlock
 {
     // self.configDict = configDict;
-    
+
     self.serviceKeys = @{@(eGALegalVersionKey) : kLegalVersionKeyName,
                          @(eGALegalURLKey) : kLegalURLKeyName};
-    
-    
+
+
     [self showAlertWithService:serviceURL language:language andCompletionBlock:completionBlock];
 }
 
@@ -172,31 +190,31 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:serviceURL]];
     // Create url connection and fire request
     __unused NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
+
     if (completionBlock) {
         self.completionBlock = completionBlock;
     }
 }
-    
+
 - (void)showAlertWithService:(NSString *)serviceURL language:(NSString *)language andCompletionBlock:(void(^)(NSError *,NSString *))completionBlock;
 {
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:serviceURL]];
     // Create url connection and fire request
     __unused NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     self.language = language;
-    
+
     if (completionBlock) {
         self.completionBlockURL = completionBlock;
     }
 }
-    
+
 
 #pragma mark LegalConditionsVCDelegate
 -(void)legalConditionsVCDidPressAccept:(LegalConditionsVC *)legalConditionsVC
 {
     // store version accepted
     [self storeLegalVersion:[NSNumber numberWithInteger: self.legalVersion]];
-    
+
     // run completion
     if (self.completionBlock) {
         self.completionBlock(nil);
@@ -230,7 +248,7 @@
     NSError *error;
     NSString *string = [[NSString alloc] initWithData:_responseData encoding:NSUTF8StringEncoding];
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
-    
+
     id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     [self parseJSON:jsonObject withServiceKeys:_serviceKeys language:self.language];
 }
