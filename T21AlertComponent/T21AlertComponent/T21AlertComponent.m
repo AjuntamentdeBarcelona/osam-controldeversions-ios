@@ -356,7 +356,7 @@
                                        style:UIAlertActionStyleDefault
                                        handler:^(UIAlertAction *  _Nonnull action)
                                        {
-                                           [weakSelf openAlertActionURLWithTitle:title
+                                           [self openAlertActionURLWithTitle:title
                                                                          message:message andOkButtonTitle:okTitle];
                                        }];
             
