@@ -2,13 +2,13 @@
 
 # README
 
-## ¿Com fer servir el mòdul?
-- Per fer servir el mòdul de control de versions, cal afegir al fitxer Podfile la ubicació del repositori:
+## ¿Cómo utilizar el módulo?
+- Para utilizar el módulo de control de versiones, hay que añadir al archivo Podfile la ubicación del repositorio:
 
 ```
 pod 'VersionControl', :git => 'https://github.com/AjuntamentdeBarcelona/osam-controldeversions-ios.git'
 ```
-- i actualitzar mitjançant la comanda 'pod update' les dependències.
+- Actualizar mediante el comando 'pod update' las dependencias.
 
 ## Introducción
 Este módulo mostrará un popUp en la pantalla cuando el servicio detecte que hay una nueva versión de la app.
