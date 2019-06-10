@@ -1,7 +1,118 @@
 # osam-controldeversions-iOS
 
 # README
+# CA
+## Com utilitzar el mòdul?
+- Per utilitzar el mòdul de control de versions, cal afegir l'arxiu Podfile la ubicació del repositori:
 
+```
+pod 'VersionControl', :git => 'https://github.com/AjuntamentdeBarcelona/osam-controldeversions-ios.git'
+```
+
+- Actualitzar mitjançant el comandament 'pod update' les dependències.
+
+
+## Introducció
+Aquest mòdul mostrarà un popup a la pantalla quan el servei detecti que hi ha una nova versió de l'app.
+
+Aquesta alerta la podem mostrar amb un missatge i amb o sense botons de confirmació d'accions.
+
+Tindrem tres diferents tipus d'alerta:
+  1. popup amb un missatge i / o un títol, sense botons que vaig bloquejar l'app completament.
+  2. popup amb un missatge i / o un títol, amb botó de "ok" que un cop fet clic redirigirà l'usuari a una url.
+  3. popup amb un missatge i / o un títol, amb botons de "ok" i "cancel". Si fem clic al botó de cancel·lar l'alerta desapareixerà, i si ho fem al de confirmar s'obrirà una url.
+  
+## Descàrrega dels mòduls
+Des Osam es proporcionen mòduls per realitzar un conjunt de tasques comunes a totes les apps publicades per l'Ajuntament de Barcelona.
+El mòdul de Control de Versions (IOS / Android) està disponible com a repositori a:
+
+https://github.com/AjuntamentdeBarcelona/osam-controldeversions-ios
+
+
+## Implementació
+Per crear el missatge d'alerta, únicament hem de Cridar a la funció indicada a continuació, i aquesta descarregarà el json amb les variables ja definides i mostrarà l'alerta segons els valors rebuts:
+
+```
+  NSString *actionURL = @”http://serviceurl.com”;
+  [_T2 1GenericAlert showAlertWithService:actionURL withLanguage:@"es" andCompletionBlock:^(NSError *error) {
+      if (error) {
+        NSLog(@"%@", error);
+      }
+  }];
+```
+Nota: "http://serviceurl.com" serà la url on es troba el json amb la configuració de l'alerta a mostrar. Substituir per la URL correcta.
+
+## Format fitxer JSON
+```
+    {
+        "version": "2.1.1",
+        "comparisonMode": "0",
+        "minSystemVersion": "5.0",
+        "title": {
+            "es": "Título de la alerta",
+            "cat": "Títol de la alerta",
+            "en": "Alert title"
+        },
+        "message": {
+           "es": "Prueba en castellano.",
+           "cat": "Prova en català.",
+           "en": "Test in english."
+       },
+      "okButtonTitle": {
+          "es": "Vale",
+          "cat": "Val",
+          "en": "Ok"
+     },
+     "cancelButtonTitle": {
+          "es": "Cancelar",
+          "cat": "Cancel·lar",
+          "en": "Cancel"
+     },
+     "okButtonActionURL": "http://www.apple.com <http://www.apple.com/> "
+   }
+```
+
+## Paràmetres
+- versio
+  - Obligatori
+  - Especifica la versió mínima de l'aplicació que volem que es comprovi, per a totes aquelles versions menors (estrictament) a aquesta, es mostrarà l'alerta de control de versió i per a la resta no es mostrarà res.
+- comparisonMode
+  - Obligatori
+  - Especifica la manera de comparació de la versió de l'app amb el mòdul
+- minSystemVersion
+  - Obligatori
+  - Especifica a partir que versió del sistema es mostrarà l'alerta.
+- title
+  - Obligatori
+  - Títol de l'alerta en el cas que s'hagi de mostrar.
+- message
+  - Obligatori
+  - Missatge de l'alerta en cas que s'hagi de mostrar.
+- okButtonTitle
+  - Opcional
+  - Títol del botó d'acceptar.
+  - Si es rep aquest paràmetre juntament amb el paràmetre okButtonActionURL, es mostrarà en l'alerta un botó d'acceptar que obrirà el link que s'ha especificat en el paràmetre okButtonActionURL.
+- okButtonActionURL
+  - Opcional
+  - Link que s'obrirà quan l'usuari seleccioni el botó d'acceptar. Per exemple: link de la nova versió de l'aplicació a l'App Store / Google Play.
+  - Si es rep aquest paràmetre juntament amb el paràmetre okButtonTitle, es mostrarà en l'alerta un botó d'acceptar que obrirà el link que s'hagi especificat.
+- cancelButtonTitle
+  - Opcional
+  - Títol del botó de cancel·lar.
+  - Si es rep aquest paràmetre es mostrarà en l'alerta un botó de cancel·lar que permetrà a l'usuari tancar l'alerta i continuar utilitzant l'aplicació amb normalitat.
+  
+## Com funciona el mòdul de control de versions
+Depenent del valor del paràmetre "comparisonMode" mostrarem l'alerta.
+
+Aquest paràmetre compararà la versió instal·lada amb la qual rebem del json, en funció de tres valors:
+
+  0. -> Mostra l'alerta a les apps amb un nombre de versió menor que el rebut de l'json
+  1. -> Mostra l'alerta en les apps que tinguin el mateix valor que el rebut de l'json
+  2. -> Mostra l'alerta en les apps amb un nombre de versió major que el rebut de l'json
+
+A més, es comprovarà que la versió del SO sigui com a mínim la indicada en el fitxer de configuració.
+
+# ES
 ## ¿Cómo utilizar el módulo?
 - Para utilizar el módulo de control de versiones, hay que añadir al archivo Podfile la ubicación del repositorio:
 
@@ -19,6 +130,7 @@ Tendremos tres diferentes tipos de alerta:
   1. popUp con un mensaje y/o un título, sin botones que bloqueé la app completamente.
   2. popUp con un mensaje y/o un título, con botón de “ok” que una vez hecho click redirigirá al usuario a una url.
   3. popUp con un mensaje y/o un título, con botones de “ok” y “cancel”. Si hacemos click al botón de cancelar la alerta desaparecerá, y si lo hacemos al de confirmar se abrirá una url.
+
 
 ## Descarga de los módulos
 Desde Osam se proporcionan módulos para realizar un conjunto de tareas comunes a todas las apps publicadas por el Ayuntamiento de Barcelona.
