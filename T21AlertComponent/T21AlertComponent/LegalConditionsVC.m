@@ -11,9 +11,13 @@
 #import "LCCircularProgressView.h"
 #import "T21LegalComponent.h"
 
-@interface LegalConditionsVC () <UIWebViewDelegate>
+#define STATUSBAR_SIZE ((IS_IPHONE_X)? 44 : 22)
+#define IS_IPHONE_X ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) && [UIScreen mainScreen].bounds.size.height == 812.0
+
+@interface LegalConditionsVC () <WKUIDelegate>
 
 @property (weak, nonatomic) IBOutlet LCCircularProgressView *circularProgressView;
+@property (unsafe_unretained, nonatomic) IBOutlet UIView *WKContentView;
 
 @end
 
@@ -28,11 +32,70 @@
     return self;
 }
 
+- (BOOL)prefersStatusBarHidden{
+    return NO;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIViewController *vc = [UIViewController alloc];
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:vc animated:YES completion:nil];
     
-    self.legalConditionsWebView.delegate = self;
+    self.webConfiguration = [[WKWebViewConfiguration alloc] init];
+    self.legalConditionsWebView = [[WKWebView alloc] initWithFrame:self.WKContentView.frame configuration:self.webConfiguration];
+    self.legalConditionsWebView.navigationDelegate = self;
+
     [self.legalConditionsAcceptButton setEnabled:NO];
+    [self.WKContentView addSubview:self.legalConditionsWebView];
+    
+    self.legalConditionsWebView.translatesAutoresizingMaskIntoConstraints = false;
+    NSLayoutConstraint * height = [NSLayoutConstraint constraintWithItem:self.legalConditionsWebView
+     attribute:NSLayoutAttributeHeight
+     relatedBy:NSLayoutRelationEqual
+        toItem:self.WKContentView
+     attribute:NSLayoutAttributeHeight
+    multiplier:1
+      constant:0];
+    NSLayoutConstraint * width = [NSLayoutConstraint constraintWithItem:self.legalConditionsWebView
+     attribute:NSLayoutAttributeWidth
+     relatedBy:NSLayoutRelationEqual
+        toItem:self.WKContentView
+     attribute:NSLayoutAttributeWidth
+    multiplier:1
+      constant:0];
+    NSLayoutConstraint * leftConstraint = [NSLayoutConstraint constraintWithItem:self.legalConditionsWebView
+     attribute:NSLayoutAttributeLeftMargin
+     relatedBy:NSLayoutRelationEqual
+        toItem:self.WKContentView
+     attribute:NSLayoutAttributeLeftMargin
+    multiplier:1
+      constant:0];
+    NSLayoutConstraint * rightConstraint = [NSLayoutConstraint constraintWithItem:self.legalConditionsWebView
+     attribute:NSLayoutAttributeRightMargin
+     relatedBy:NSLayoutRelationEqual
+        toItem:self.WKContentView
+     attribute:NSLayoutAttributeRightMargin
+    multiplier:1
+      constant:0];
+    NSLayoutConstraint * bottomConstraint = [NSLayoutConstraint constraintWithItem:self.legalConditionsWebView
+     attribute:NSLayoutAttributeBottomMargin
+     relatedBy:NSLayoutRelationEqual
+        toItem:self.WKContentView
+     attribute:NSLayoutAttributeBottomMargin
+    multiplier:1
+      constant:0];
+
+    [self.WKContentView addConstraint: height];
+    [self.WKContentView addConstraint: width];
+    [self.WKContentView addConstraint: leftConstraint];
+    [self.WKContentView addConstraint: rightConstraint];
+    [self.WKContentView addConstraint: bottomConstraint];
+    
     
     self.circularProgressView.isInfiniteProgress = YES;
     
@@ -70,10 +133,10 @@
         self.legalConditionsButtonContainerHeight.constant = backgroundHeight.floatValue;
     }
     
-    NSNumber *width = self.configDict[legal_button_width];
+    /*NSNumber *width = self.configDict[legal_button_width];
     if(width) {
         self.legalConditionsButtonWidth.constant = width.floatValue;
-    }
+    }*/
     
     NSNumber *buttonHeight = self.configDict[legal_button_height];
     if(buttonHeight) {
@@ -94,36 +157,31 @@
     }];
 }
 
-#pragma mark - UIWebViewDelegate
--(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+#pragma mark - WKUIDelegate
+-(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
 {
-    if (navigationType == UIWebViewNavigationTypeLinkClicked) {
-        
-        if (@available(iOS 9.0, *)) {
-            SFSafariViewController *safariViewController = [[SFSafariViewController alloc] initWithURL:request.URL];
-            if (@available(iOS 10.0, *)) {
-                [safariViewController setPreferredControlTintColor:self.configDict[legal_primary_color]];
-            } else {
-                // Fallback on earlier versions
-            }
-            [self presentViewController:safariViewController animated:YES completion:^{}];
-        } else {
-            // Fallback on earlier versions
-            [[UIApplication sharedApplication] openURL:request.URL];
+    if (navigationAction.navigationType == WKNavigationTypeOther) {
+        if (@available(iOS 13.0, *)) {
+                
+                    if(![[UIApplication sharedApplication] isStatusBarHidden])
+                [self.navigationController.view setFrame:CGRectMake(0, STATUSBAR_SIZE, self.view.frame.size.width,self.view.frame.size.height )];
+            else
+                [self.navigationController.view setFrame:CGRectMake(0, 0, self.view.frame.size.width,self.view.frame.size.height )];
         }
-        return NO;
+        
     }
-    return YES;
+    decisionHandler(1);//WKNavigationActionPolicy.allow
 }
 
--(void)webViewDidStartLoad:(UIWebView *)webView
+
+- (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation
 {
     [self.circularProgressView setHidden:NO];
     [self.circularProgressView startAnimating];
     [self.legalConditionsAcceptButton setEnabled:NO];
 }
 
--(void)webViewDidFinishLoad:(UIWebView *)webView
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
 {
     [self.circularProgressView setHidden:YES];
     [self.circularProgressView stopAnimating];

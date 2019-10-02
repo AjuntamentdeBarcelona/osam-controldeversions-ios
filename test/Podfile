@@ -6,6 +6,6 @@ target 'test' do
   # use_frameworks!
 
   # Pods for test
-  pod 'VersionControl', :git => 'https://gitlab.dtibcn.cat/osam_ios/control_versions_ios.git', :tag => '1.3.0'
+  pod 'VersionControl', :git => 'https://gitlab.dtibcn.cat/osam_ios/control_versions_ios.git', :tag => '1.3.2'
 
 end
