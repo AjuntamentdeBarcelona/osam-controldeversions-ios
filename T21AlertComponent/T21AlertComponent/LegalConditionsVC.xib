@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LegalConditionsVC">
             <connections>
+                <outlet property="WKContentView" destination="UsJ-2O-vgj" id="uYV-Q0-19I"/>
                 <outlet property="circularProgressView" destination="mK3-Fk-kxx" id="LZT-eM-xRT"/>
                 <outlet property="legalConditionsAcceptButton" destination="yhQ-2h-jUx" id="XkO-xj-cAz"/>
                 <outlet property="legalConditionsBackgroundImageView" destination="3zs-s3-dRR" id="oZP-ah-3zu"/>
