@@ -5,6 +5,7 @@
 //  Created by Tempos21 on 09/05/2018.
 //
 
+@import WebKit;
 #import <UIKit/UIKit.h>
 
 @class LegalConditionsVC;
@@ -17,7 +18,6 @@
 
 @interface LegalConditionsVC : UIViewController
 
-@property (unsafe_unretained, nonatomic) IBOutlet UIWebView *legalConditionsWebView;
 @property (unsafe_unretained, nonatomic) IBOutlet UIButton *legalConditionsAcceptButton;
 @property (weak, nonatomic) IBOutlet UIView *legalConditionsButtonContainer;
 @property (unsafe_unretained, nonatomic) IBOutlet UIImageView *legalConditionsBackgroundImageView;
@@ -25,6 +25,8 @@
 @property (unsafe_unretained, nonatomic) IBOutlet NSLayoutConstraint *legalConditionsButtonHeight;
 @property (unsafe_unretained, nonatomic) IBOutlet NSLayoutConstraint *legalConditionsButtonWidth;
     
+@property (nonatomic,strong) WKWebView *legalConditionsWebView;
+@property (nonatomic,strong) WKWebViewConfiguration *webConfiguration;
 @property (nonatomic,weak) id<LegalConditionsVCDelegate> delegate;
 @property (nonatomic,strong) NSDictionary *configDict;
 
