@@ -6,7 +6,7 @@
 - Per utilitzar el mòdul de control de versions, cal afegir l'arxiu Podfile la ubicació del repositori:
 
 ```
-pod 'VersionControl', :git => 'https://github.com/AjuntamentdeBarcelona/osam-controldeversions-ios.git'
+pod 'VersionControl', :git => 'https://github.com/AjuntamentdeBarcelona/osam-controldeversions-ios.git', :tag => '1.3.3'
 ```
 
 - Actualitzar mitjançant el comandament 'pod update' les dependències.
