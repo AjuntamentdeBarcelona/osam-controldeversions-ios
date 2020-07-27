@@ -11,9 +11,6 @@
 #import "LCCircularProgressView.h"
 #import "T21LegalComponent.h"
 
-#define STATUSBAR_SIZE ((IS_IPHONE_X)? 44 : 22)
-#define IS_IPHONE_X ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) && [UIScreen mainScreen].bounds.size.height == 812.0
-
 @interface LegalConditionsVC () <WKUIDelegate>
 
 @property (weak, nonatomic) IBOutlet LCCircularProgressView *circularProgressView;
@@ -164,7 +161,7 @@
         if (@available(iOS 13.0, *)) {
                 
                     if(![[UIApplication sharedApplication] isStatusBarHidden])
-                [self.navigationController.view setFrame:CGRectMake(0, STATUSBAR_SIZE, self.view.frame.size.width,self.view.frame.size.height )];
+                [self.navigationController.view setFrame:CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, self.view.frame.size.width,self.view.frame.size.height )];
             else
                 [self.navigationController.view setFrame:CGRectMake(0, 0, self.view.frame.size.width,self.view.frame.size.height )];
         }
