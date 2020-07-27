@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'VersionControl'
-    s.version      = '1.3.3'
+    s.version      = '1.3.4'
     s.license      = { :type => 'BSD' }
     s.homepage     = 'https://github.com/AjuntamentdeBarcelona/osam-controldeversions-ios.git'
     s.summary      = 'VersionControl offers helper methods to alert the user when there is a new version of the app'
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     }
 
     s.source  = {
-        :git => "https://github.com/AjuntamentdeBarcelona/osam-controldeversions-ios.git", :tag => "1.3.3"
+        :git => "https://github.com/AjuntamentdeBarcelona/osam-controldeversions-ios.git", :tag => "1.3.4"
     }
 
     s.source_files = "T21AlertComponent/T21AlertComponent/**/*.{h,m}", "T21AlertComponent/T21AlertComponent/categories/**/*.{h,m}"
